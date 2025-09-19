@@ -62,14 +62,9 @@ export default function ProjectsSection() {
                             key={p.title}
                             className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                         >
-                            {/* CHANGED: center image and avoid cropping */}
-                            <div className="aspect-video bg-gray-700 relative grid place-items-center">
-                                <Image
-                                    src={p.image}
-                                    alt={p.title}
-                                    fill
-                                    className="object-contain object-center p-2"
-                                />
+                            {/* REVERTED: back to object-cover */}
+                            <div className="aspect-video bg-gray-700 relative">
+                                <Image src={p.image} alt={p.title} fill className="object-cover" />
                             </div>
 
                             <div className="p-4 sm:p-6">
