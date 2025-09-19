@@ -13,8 +13,8 @@ export default function SkillsSection() {
         'GitHub',
         'Agile',
         'Problem Solving',
-        'DevOps Enthusiast'
-        'Clean Code',
+        'DevOps Enthusiast',
+        'Clean Code'
     ];
 
 	return (

@@ -24,7 +24,7 @@ const projects: Project[] = [
         tech: ['PC Hardware', 'Business Ops', 'Marketing'],
         link: 'www.jawa.gg/sp/415071/joeltech',
         image: '/JoelTech.jpg'
-    }
+    },
     {
         title: 'Amazon KDP Publishing',
         description:
