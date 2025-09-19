@@ -1,6 +1,6 @@
 export default function SkillsSection() {
     const skills = [
-        'AWS (Bedrock, IAM, S3, Lambda)',
+        'AWS Bedrock, IAM, S3, Lambda',
         'Docker',
         'JS',
         'TypeScript',
@@ -13,8 +13,8 @@ export default function SkillsSection() {
         'GitHub',
         'Agile',
         'Problem Solving',
-        'Clean Code',
         'DevOps Enthusiast'
+        'Clean Code',
     ];
 
 	return (
