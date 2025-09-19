@@ -17,10 +17,7 @@ const projects: Project[] = [
             'AI-powered posture correction system using Python + OpenCV on Raspberry Pi. Recognized with a Congressional Certificate of Innovation from Congressman Pat Fallon.',
         tech: ['Python', 'OpenCV', 'Raspberry Pi'],
         image: '/POSTURISE.png',
-        links: [
-            { label: 'GitHub', href: 'https://github.com/joelmanjet/posture/tree/main' },
-            // add demo if you want: { label: 'Demo Video', href: 'https://youtu.be/wMsW9KDuxiQ' }
-        ],
+        links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/posture/tree/main' }],
     },
     {
         title: 'JoelTech Custom PC Storefront (Jawa.gg)',
@@ -65,8 +62,14 @@ export default function ProjectsSection() {
                             key={p.title}
                             className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                         >
-                            <div className="aspect-video bg-gray-700 relative">
-                                <Image src={p.image} alt={p.title} fill className="object-cover" />
+                            {/* CHANGED: center image and avoid cropping */}
+                            <div className="aspect-video bg-gray-700 relative grid place-items-center">
+                                <Image
+                                    src={p.image}
+                                    alt={p.title}
+                                    fill
+                                    className="object-contain object-center p-2"
+                                />
                             </div>
 
                             <div className="p-4 sm:p-6">
