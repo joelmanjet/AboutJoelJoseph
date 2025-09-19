@@ -43,8 +43,8 @@ const projects: Project[] = [
         description:
             'Script that scrapes Jawa Discord sales alerts and analyzes GPU/CPU trends to optimize pricing and part choices.',
         tech: ['Node.js', 'Puppeteer', 'Data Analysis'],
-        image: '/code.jpg',
-        links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/jawa-scraper' }],
+        image: '/Script.svg',
+        links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/PCTrendsDataScraping/tree/main' }],
     },
 ];
 
