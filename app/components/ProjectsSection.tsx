@@ -20,6 +20,14 @@ const projects: Project[] = [
         links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/posture/tree/main' }],
     },
     {
+        title: 'PC Sales Data Scraper',
+        description:
+            'Script that scrapes Jawa Discord sales alerts and analyzes GPU/CPU trends to optimize pricing and part choices.',
+        tech: ['Node.js', 'Puppeteer', 'Data Analysis'],
+        image: '/Script.svg',
+        links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/PCTrendsDataScraping/tree/main' }],
+    },
+    {
         title: 'JoelTech Custom PC Storefront (Jawa.gg)',
         description:
             'Verified seller storefront for high-value custom PCs on Jawa.gg; featured by the platform on Instagram and in newsletters.',
@@ -37,14 +45,6 @@ const projects: Project[] = [
         tech: ['Publishing', 'Design', 'SEO'],
         image: '/LogBook.jpg',
         links: [{ label: 'Amazon Listing', href: 'https://a.co/d/9rn0LFe' }],
-    },
-    {
-        title: 'PC Sales Data Scraper',
-        description:
-            'Script that scrapes Jawa Discord sales alerts and analyzes GPU/CPU trends to optimize pricing and part choices.',
-        tech: ['Node.js', 'Puppeteer', 'Data Analysis'],
-        image: '/Script.svg',
-        links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/PCTrendsDataScraping/tree/main' }],
     },
 ];
 
