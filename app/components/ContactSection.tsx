@@ -50,7 +50,7 @@ export default function ContactSection() {
                         </a>
 
                         <a
-                            href="/resume.pdf"
+                            href="https://joeljoseph.info/"
                             target="_blank"
                             className="px-6 py-2 border border-gray-600 text-gray-300 font-medium rounded hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2"
                         >
