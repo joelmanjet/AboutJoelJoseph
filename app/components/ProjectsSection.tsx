@@ -46,6 +46,15 @@ const projects: Project[] = [
         image: '/LogBook.jpg',
         links: [{ label: 'Amazon Listing', href: 'https://a.co/d/9rn0LFe' }],
     },
+    {
+        title: 'YouTube – Tech + Education Channel',
+        description:
+            '40+ videos on programming, hardware reviews, and tutorials; 155K+ total views. Focus on concise, practical walkthroughs.',
+        tech: ['Video Production', 'Premiere Pro', 'Photoshop'],
+        image: '/YouTube.jpg', 
+        links: [
+            { label: 'Channel', href: 'https://www.youtube.com/@ThisGuy_JJ' }],
+    },
 ];
 
 export default function ProjectsSection() {
