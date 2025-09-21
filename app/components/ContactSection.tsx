@@ -97,5 +97,13 @@ export default function ContactSection() {
                 </motion.div>
             </div>
         </section>
-    );
+
+    {/* tiny, greyed-out footer note */}
+    <footer className="py-6 px-4 border-t border-gray-800">
+        <p className="max-w-2xl mx-auto text-center text-xs text-gray-500/70">
+            Built with TypeScript & Tailwind CSS
+        </p>
+    </footer>
+</>
+);
 }
