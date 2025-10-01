@@ -12,7 +12,7 @@ export default function HeroSection() {
 				<h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4">Joel Joseph</h1>
 				<p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">CS Student | Interested in DevOps & Software Dev.</p>
 				<p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
-					I’m a Computer Science student at UT-Dallas with a strong focus on software development, full-stack development, and DevOps. I enjoy learning and building projects from the ground up!
+					I’m a Computer Science student at UT-Dallas expected to graduate in December 2027 with a strong focus on software development, full-stack development, and DevOps. I enjoy learning and building projects from the ground up!
 				</p>
 			</div>
 		</section>
