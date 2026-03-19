@@ -28,13 +28,13 @@ const projects: Project[] = [
         links: [{ label: 'GitHub', href: 'https://github.com/joelmanjet/PCTrendsDataScraping/tree/main' }],
     },
     {
-        title: 'JoelTech Custom PC Storefront (Jawa.gg)',
+        title: 'Paradigm Custom PC Storefront (Jawa.gg)',
         description:
             'Verified seller storefront for high-value custom PCs on Jawa.gg; featured by the platform on Instagram and in newsletters.',
         tech: ['PC Hardware', 'Business Ops', 'Marketing'],
-        image: '/JoelTech.jpg',
+        image: '/Paradigm.jpg',
         links: [
-            { label: 'Storefront', href: 'https://www.jawa.gg/sp/415071/joeltech' },
+            { label: 'Storefront', href: 'https://www.jawa.gg/sp/415071/paradigm' },
             { label: 'Instagram Feature', href: 'https://www.instagram.com/p/DOt9EqeCSvB/?utm_source=ig_web_copy_link' },
         ],
     },

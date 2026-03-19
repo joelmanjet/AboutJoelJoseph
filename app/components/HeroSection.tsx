@@ -30,7 +30,7 @@ export default function HeroSection() {
         </p>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
           I’m a Computer Science student at UT-Dallas expected to graduate in
-          December 2027 with a strong focus on software development,
+          May 2027 with a strong focus on software development,
           full-stack development, and DevOps. I enjoy learning and building
           projects from the ground up!
         </p>
