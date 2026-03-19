@@ -32,7 +32,7 @@ const projects: Project[] = [
         description:
             'Verified seller storefront for high-value custom PCs on Jawa.gg; featured by the platform on Instagram and in newsletters.',
         tech: ['PC Hardware', 'Business Ops', 'Marketing'],
-        image: '/Paradigm.jpg',
+        image: '/Paradigm.png',
         links: [
             { label: 'Storefront', href: 'https://www.jawa.gg/sp/415071/paradigm' },
             { label: 'Instagram Feature', href: 'https://www.instagram.com/p/DOt9EqeCSvB/?utm_source=ig_web_copy_link' },
