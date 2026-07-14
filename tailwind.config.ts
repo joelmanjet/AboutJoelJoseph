@@ -17,16 +17,16 @@ export default {
         },
         "warm-gray": "#5A544A",
         "champagne": {
-          'start': '#FFFEFB',
-          '45': '#F7F2E7',
-          '80': '#EFE7D3',
-          'end': '#E6DAC0',
-          'flat': '#FBF8F1',
+          'start': '#FFFFFF',
+          '45': '#FDFBF6',
+          '80': '#F9F4E8',
+          'end': '#F2E9D6',
+          'flat': '#FDFBF6',
         }
       },
       fontFamily: {
-        archivo: ["Archivo", "sans-serif"],
-        "source-sans-3": ["Source Sans 3", "sans-serif"],
+        archivo: ["var(--font-archivo)", "Archivo", "sans-serif"],
+        "source-sans-3": ["var(--font-source-sans-3)", "Source Sans 3", "sans-serif"],
       },
       letterSpacing: {
         tightest: '-.075em',

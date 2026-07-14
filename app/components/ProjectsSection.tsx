@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import ChromeBeam from './ChromeBeam';
+import TiltCard from './TiltCard';
 
 type Link = { label: string; href: string };
 
@@ -59,31 +61,32 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
     return (
-        <section className="py-12 sm:py-20">
+        <section id="projects" className="py-12 sm:py-20 scroll-mt-20">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8 text-center">
+                <h2 className="font-archivo italic font-semibold tracking-heading text-xl sm:text-2xl text-navy mb-2 text-center">
                     Featured Projects
                 </h2>
+                <ChromeBeam />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                     {projects.map((p) => (
-                        <div
+                        <TiltCard
                             key={p.title}
-                            className="bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                            className="bg-white/60 overflow-hidden border border-navy/10"
+                            style={{ boxShadow: '0 2px 12px rgba(20,28,40,0.08)' }}
                         >
-                            {/* REVERTED: back to object-cover */}
-                            <div className="aspect-video bg-gray-700 relative">
+                            <div className="aspect-video bg-champagne-flat relative">
                                 <Image src={p.image} alt={p.title} fill className="object-cover" />
                             </div>
 
                             <div className="p-4 sm:p-6">
-                                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
+                                <h3 className="text-base sm:text-lg font-semibold text-navy mb-2">
                                     {p.title}
                                 </h3>
 
-                                <p className="text-sm sm:text-base text-gray-300 mb-3">{p.description}</p>
+                                <p className="text-sm sm:text-base text-warm-gray mb-3">{p.description}</p>
 
-                                <p className="text-xs text-gray-400 mb-4">{p.tech.join(' • ')}</p>
+                                <p className="text-xs text-warm-gray/70 mb-4">{p.tech.join(' • ')}</p>
 
                                 <div className="flex flex-wrap gap-3">
                                     {p.links.map((l) => (
@@ -92,14 +95,14 @@ export default function ProjectsSection() {
                                             href={l.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base"
+                                            className="text-navy hover:text-navy-hover font-medium text-sm sm:text-base transition-colors"
                                         >
                                             {l.label} →
                                         </a>
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </TiltCard>
                     ))}
                 </div>
             </div>

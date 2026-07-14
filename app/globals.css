@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
-	background-color: #111111;
+	background: linear-gradient(150deg, #FFFFFF 0%, #FDFBF6 40%, #F9F4E8 75%, #F2E9D6 100%);
+	background-attachment: fixed;
+	color: #5A544A;
+	font-family: var(--font-source-sans-3), sans-serif;
 }

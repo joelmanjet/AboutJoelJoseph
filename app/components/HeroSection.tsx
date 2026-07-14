@@ -2,10 +2,11 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import ChromeBeam from './ChromeBeam';
 
 export default function HeroSection() {
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+    <section id="home" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,20 +20,18 @@ export default function HeroSection() {
             alt="Profile Picture"
             width={120}
             height={120}
-            className="rounded-full mx-auto border-4 border-gray-700 shadow-lg"
+            className="rounded-full mx-auto border border-white/60 shadow-sm"
           />
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4">
+        <h1 className="font-archivo italic font-semibold tracking-heading text-3xl sm:text-4xl text-navy mb-3 sm:mb-4">
           Joel Joseph
         </h1>
-        <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8">
-          CS Student | Interested in DevOps &amp; Software Dev.
+        <ChromeBeam withFaintLine />
+        <p className="text-lg sm:text-xl text-warm-gray mb-6 sm:mb-8">
+          Software Engineering Intern @ Equinix | Salesforce Data Cloud &amp; Agentforce
         </p>
-        <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
-          I’m a Computer Science student at UT-Dallas expected to graduate in
-          May 2027 with a strong focus on software development,
-          full-stack development, and DevOps. I enjoy learning and building
-          projects from the ground up!
+        <p className="text-warm-gray/80 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          Computer Science student at UT-Dallas, graduating May 2027.
         </p>
       </motion.div>
     </section>

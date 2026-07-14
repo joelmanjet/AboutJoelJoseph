@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import ChromeBeam from './ChromeBeam';
 
 export default function ContactSection() {
   return (
     <>
-      <section className="py-16 px-4 border-t border-gray-800">
+      <section id="contact" className="py-16 px-4 border-t border-navy/10 scroll-mt-20">
         <div className="max-w-2xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -13,13 +14,14 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-center space-y-6"
           >
-            <h2 className="text-2xl font-semibold text-white">Contact</h2>
-            <p className="text-gray-300">
+            <h2 className="font-archivo italic font-semibold tracking-heading text-2xl text-navy">Contact</h2>
+            <ChromeBeam />
+            <p className="text-warm-gray">
               Interested in working together? Let&apos;s have a conversation.
             </p>
 
             {/* Location */}
-            <div className="flex items-center justify-center gap-2 text-gray-300">
+            <div className="flex items-center justify-center gap-2 text-warm-gray">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -33,7 +35,7 @@ export default function ContactSection() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="mailto:joel.biju.joseph@gmail.com"
-                className="px-6 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors inline-flex items-center justify-center gap-2"
+                className="px-6 py-2 text-navy font-medium border border-navy/20 hover:text-navy-hover hover:border-navy-hover/40 transition-colors inline-flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -46,7 +48,7 @@ export default function ContactSection() {
                 href="https://joeljoseph.info/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 border border-gray-600 text-gray-300 font-medium rounded hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2"
+                className="px-6 py-2 border border-navy/20 text-navy font-medium hover:text-navy-hover hover:border-navy-hover/40 transition-colors inline-flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd"
@@ -66,7 +68,7 @@ export default function ContactSection() {
                 href="https://github.com/joelmanjet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-warm-gray hover:text-navy transition-colors"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -78,7 +80,7 @@ export default function ContactSection() {
                 href="https://www.linkedin.com/in/imjoel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-warm-gray hover:text-navy transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -90,9 +92,8 @@ export default function ContactSection() {
         </div>
       </section>
 
-      {/* tiny, greyed-out footer note */}
-      <footer className="py-6 px-4 border-t border-gray-800">
-        <p className="max-w-2xl mx-auto text-center text-xs text-gray-500/70">
+      <footer className="py-6 px-4 border-t border-navy/10">
+        <p className="max-w-2xl mx-auto text-center text-xs text-warm-gray/70">
           Built with TypeScript &amp; Tailwind CSS
         </p>
       </footer>

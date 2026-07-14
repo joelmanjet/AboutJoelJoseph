@@ -1,21 +1,26 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Archivo, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
+import ReactiveBackground from './components/ReactiveBackground';
+import ScrollProgressBeam from './components/ScrollProgressBeam';
+import TopNav from './components/TopNav';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+const archivo = Archivo({
+	variable: '--font-archivo',
 	subsets: ['latin'],
+	weight: ['400', '500', '600'],
+	style: ['normal', 'italic'],
 });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
+const sourceSans3 = Source_Sans_3({
+	variable: '--font-source-sans-3',
 	subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-	title: 'Joel Joseph - Computer Science Student | Interested in DevOps & Software Development',
+	title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
 	description:
-		'I’m Joel Joseph, a Computer Science student at the University of Texas at Dallas with a strong focus on software development and systems programming, expected to graduate in December 2027.',
+		'I’m Joel Joseph, a Software Engineering Intern at Equinix working with Salesforce Data Cloud and Agentforce, and a Computer Science student at the University of Texas at Dallas expected to graduate in May 2027.',
 	keywords: [
         'Software Developer',
         'Web Developer',
@@ -37,12 +42,18 @@ export const metadata: Metadata = {
         'Clean Code',
         'Backend Development',
         'User Experience',
+        'Salesforce',
+        'Salesforce Data Cloud',
+        'Agentforce',
+        'SOQL',
+        'LWC',
+        'Equinix',
 		'Joel Joseph',
 	],
 	authors: [{ name: 'Joel Joseph' }],
 	creator: 'Joel Joseph',
 	openGraph: {
-		title: 'Joel Joseph - Computer Science Student | Interested in DevOps & Software Development',
+		title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
 		url: 'https://your-domain.com',
 		siteName: '[Your Name] - Portfolio',
@@ -84,7 +95,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${archivo.variable} ${sourceSans3.variable} antialiased`}>
+				<ReactiveBackground />
+				<TopNav />
+				<ScrollProgressBeam />
+				{children}
+			</body>
 		</html>
 	);
 }
