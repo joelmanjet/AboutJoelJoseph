@@ -16,7 +16,7 @@ export default function HeroSection() {
       >
         <div className="mb-6 sm:mb-8">
           <Image
-            src="/icon.jpg"
+            src="/iconUpdate.jpg"
             alt="Profile Picture"
             width={120}
             height={120}
