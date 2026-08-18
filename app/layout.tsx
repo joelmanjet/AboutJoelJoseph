@@ -18,7 +18,8 @@ const sourceSans3 = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-	title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
+	title: 'Joel Joseph\'s Portfolio',
+	// title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
 	description:
 		'I’m Joel Joseph, a Software Engineering Intern at Equinix working with Salesforce Data Cloud and Agentforce, and a Computer Science student at the University of Texas at Dallas expected to graduate in May 2027.',
 	keywords: [
@@ -53,16 +54,16 @@ export const metadata: Metadata = {
 	authors: [{ name: 'Joel Joseph' }],
 	creator: 'Joel Joseph',
 	openGraph: {
-		title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
+		title: 'Joel Joseph\'s Portfolio',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		url: 'https://joeljoseph.com',
+		siteName: 'Joel Joseph - Portfolio',
 		images: [
 			{
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Developer Portfolio',
+				alt: 'Joel Joseph - Developer Portfolio',
 			},
 		],
 		locale: 'en_US',
@@ -70,9 +71,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: '[Your Name] - Developer',
+		title: 'Joel Joseph\'s Portfolio',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-		creator: '@yourusername',
+		creator: '@joeljoseph',
 		images: ['/og-image.jpg'],
 	},
 	robots: {
