@@ -18,6 +18,7 @@ const sourceSans3 = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://joeljoseph.org'),
 	title: 'Joel Joseph\'s Portfolio',
 	// title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
 	description:
@@ -56,11 +57,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'Joel Joseph\'s Portfolio',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
-		url: 'https://joeljoseph.com',
+		url: '/',
 		siteName: 'Joel Joseph - Portfolio',
 		images: [
 			{
-				url: '/og-image.jpg',
+				url: '/JJ.png',
 				width: 1200,
 				height: 630,
 				alt: 'Joel Joseph - Developer Portfolio',
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
 		title: 'Joel Joseph\'s Portfolio',
 		description: 'Passionate developer creating simple and effective solutions. Explore my projects and development approach.',
 		creator: '@joeljoseph',
-		images: ['/og-image.jpg'],
+		images: ['/JJ.png'],
 	},
 	robots: {
 		index: true,
