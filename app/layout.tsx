@@ -19,10 +19,10 @@ const sourceSans3 = Source_Sans_3({
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://joeljoseph.org'),
-	title: 'Joel Joseph\'s Portfolio',
+	title: 'Joel Joseph - Software Developer & Problem Solver',
 	// title: 'Joel Joseph - Software Engineering Intern @ Equinix | Salesforce Data Cloud & Agentforce',
 	description:
-		'I’m Joel Joseph, a Software Engineering Intern at Equinix working with Salesforce Data Cloud and Agentforce, and a Computer Science student at the University of Texas at Dallas expected to graduate in May 2027.',
+		'Software Engineering Intern at Equinix. Passionate about Salesforce, web development, and solving complex problems. Explore my projects and skills.',
 	keywords: [
         'Software Developer',
         'Web Developer',
