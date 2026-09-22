@@ -16,8 +16,8 @@ const projects: Project[] = [
     {
         title: 'StatePlanGPT – AI State Policy Assistant',
         description:
-            'GPT-powered assistant that parses state-level policy and planning documents and answers questions using retrieval-augmented generation. Private project, no public link yet.',
-        tech: ['Python', 'RAG', 'AWS Bedrock', 'LLMs'],
+            'Built a State Plan document processing and analysis system with a Python, LangGraph, and LangChain backend and a React frontend to ingest policy PDFs and support retrieval-based analysis through a web interface. Developed a PDF-to-image preprocessing step and dual-OCR workflow with Docling and RapidOCR, debugging hidden text artifacts to achieve over 90% extraction confidence. Implemented an automated pipeline connecting OCR grading, confidence-based refinement, proposition chunking, and vector retrieval, running local LLMs alongside cloud models for cost-efficient processing. Private project, no public link yet.',
+        tech: ['Python', 'LangGraph', 'LangChain', 'React', 'Docling & RapidOCR', 'Vector Retrieval'],
         image: '/stateplangpt.png',
     },
     {
