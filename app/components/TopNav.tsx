@@ -2,21 +2,26 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 
 const links = [
-  { id: 'home', label: 'Joel Joseph' },
-  { id: 'skills', label: 'Skills & Technologies' },
-  { id: 'projects', label: 'Featured Projects' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'home', label: 'Joel Joseph', href: '#home', type: 'anchor' as const },
+  { id: 'skills', label: 'Skills & Technologies', href: '#skills', type: 'anchor' as const },
+  { id: 'projects', label: 'Featured Projects', href: '#projects', type: 'anchor' as const },
+  { id: 'resume', label: 'Resume', href: '/resume', type: 'route' as const },
+  { id: 'contact', label: 'Contact', href: '#contact', type: 'anchor' as const },
 ];
 
 export default function TopNav() {
   const [activeId, setActiveId] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const sections = links
+      .filter((l) => l.type === 'anchor')
       .map((l) => document.getElementById(l.id))
       .filter((el): el is HTMLElement => el !== null);
 
@@ -38,22 +43,34 @@ export default function TopNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" aria-label="Joel Joseph — home" className="flex items-center">
+        <a href={pathname === '/' ? '#home' : '/#home'} aria-label="Joel Joseph — home" className="flex items-center">
           <Logo />
         </a>
 
         <nav className="hidden sm:flex items-center gap-6">
-          {links.map((l) => (
-            <a
-              key={l.id}
-              href={`#${l.id}`}
-              className={`text-sm font-medium transition-colors ${
-                activeId === l.id ? 'text-white' : 'text-white/60 hover:text-white/90'
-              }`}
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.type === 'route' ? (
+              <Link
+                key={l.id}
+                href={l.href}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === l.href ? 'text-white' : 'text-white/60 hover:text-white/90'
+                }`}
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.id}
+                href={pathname === '/' ? l.href : `/${l.href}`}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === '/' && activeId === l.id ? 'text-white' : 'text-white/60 hover:text-white/90'
+                }`}
+              >
+                {l.label}
+              </a>
+            )
+          )}
         </nav>
 
         <button
@@ -79,18 +96,31 @@ export default function TopNav() {
             className="overflow-hidden border-t border-white/10 bg-navy/95 backdrop-blur-md sm:hidden"
           >
             <div className="flex flex-col gap-3 px-4 py-3">
-              {links.map((l) => (
-                <a
-                  key={l.id}
-                  href={`#${l.id}`}
-                  onClick={handleLinkClick}
-                  className={`text-sm font-medium transition-colors ${
-                    activeId === l.id ? 'text-white' : 'text-white/60'
-                  }`}
-                >
-                  {l.label}
-                </a>
-              ))}
+              {links.map((l) =>
+                l.type === 'route' ? (
+                  <Link
+                    key={l.id}
+                    href={l.href}
+                    onClick={handleLinkClick}
+                    className={`text-sm font-medium transition-colors ${
+                      pathname === l.href ? 'text-white' : 'text-white/60'
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.id}
+                    href={pathname === '/' ? l.href : `/${l.href}`}
+                    onClick={handleLinkClick}
+                    className={`text-sm font-medium transition-colors ${
+                      pathname === '/' && activeId === l.id ? 'text-white' : 'text-white/60'
+                    }`}
+                  >
+                    {l.label}
+                  </a>
+                )
+              )}
             </div>
           </motion.nav>
         )}
