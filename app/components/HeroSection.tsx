@@ -28,7 +28,7 @@ export default function HeroSection() {
         </h1>
         <ChromeBeam withFaintLine />
         <p className="text-lg sm:text-xl text-warm-gray mb-6 sm:mb-8">
-          Software Engineering Intern @ Equinix | Salesforce Data Cloud &amp; Agentforce
+          Prev Software Engineering Intern @ Equinix | Salesforce Data Cloud &amp; Agentforce
         </p>
         <p className="text-warm-gray/80 max-w-2xl mx-auto text-sm sm:text-base px-4">
           Computer Science student at UT-Dallas, graduating May 2027.
