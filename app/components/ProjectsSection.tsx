@@ -8,11 +8,17 @@ type Project = {
     title: string;
     description: string;
     tech: string[];
-    image: string;       // /public path, e.g. '/posturise.jpg'
-    links: Link[];       // one or more buttons
+    image?: string;      // /public path, e.g. '/posturise.jpg'; omit for a placeholder tile
+    links?: Link[];      // one or more buttons; omit when there's no public link yet
 };
 
 const projects: Project[] = [
+    {
+        title: 'StatePlanGPT – AI State Policy Assistant',
+        description:
+            'GPT-powered assistant that parses state-level policy and planning documents and answers questions using retrieval-augmented generation. Private project — no public link yet.',
+        tech: ['Python', 'RAG', 'AWS Bedrock', 'LLMs'],
+    },
     {
         title: 'PostuRise – AI Posture Correction',
         description:
@@ -76,7 +82,16 @@ export default function ProjectsSection() {
                             style={{ boxShadow: '0 2px 12px rgba(20,28,40,0.08)' }}
                         >
                             <div className="aspect-video bg-champagne-flat relative">
-                                <Image src={p.image} alt={p.title} fill className="object-cover" />
+                                {p.image ? (
+                                    <Image src={p.image} alt={p.title} fill className="object-cover" />
+                                ) : (
+                                    <div className="flex items-center justify-center h-full">
+                                        <svg className="w-10 h-10 sm:w-12 sm:h-12 text-navy/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"
+                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.99-2.386l-.548-.547z" />
+                                        </svg>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="p-4 sm:p-6">
@@ -88,19 +103,21 @@ export default function ProjectsSection() {
 
                                 <p className="text-xs text-warm-gray/70 mb-4">{p.tech.join(' • ')}</p>
 
-                                <div className="flex flex-wrap gap-3">
-                                    {p.links.map((l) => (
-                                        <a
-                                            key={l.href}
-                                            href={l.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-navy hover:text-navy-hover font-medium text-sm sm:text-base transition-colors"
-                                        >
-                                            {l.label} →
-                                        </a>
-                                    ))}
-                                </div>
+                                {p.links && p.links.length > 0 && (
+                                    <div className="flex flex-wrap gap-3">
+                                        {p.links.map((l) => (
+                                            <a
+                                                key={l.href}
+                                                href={l.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-navy hover:text-navy-hover font-medium text-sm sm:text-base transition-colors"
+                                            >
+                                                {l.label} →
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </TiltCard>
                     ))}

@@ -9,6 +9,7 @@ import Logo from './Logo';
 const links = [
   { id: 'home', label: 'Joel Joseph', href: '#home', type: 'anchor' as const },
   { id: 'skills', label: 'Skills & Technologies', href: '#skills', type: 'anchor' as const },
+  { id: 'certifications', label: 'Certifications', href: '#certifications', type: 'anchor' as const },
   { id: 'projects', label: 'Featured Projects', href: '#projects', type: 'anchor' as const },
   { id: 'resume', label: 'Resume', href: '/resume', type: 'route' as const },
   { id: 'contact', label: 'Contact', href: '#contact', type: 'anchor' as const },
