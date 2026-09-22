@@ -33,7 +33,7 @@ export default function ResumeSection() {
 
             <div className="text-center sm:text-left flex-1">
               <p className="text-warm-gray text-sm sm:text-base mb-4">
-                A snapshot of my experience, skills, and education — view it inline or grab a copy.
+                A snapshot of my experience, skills, and education. View it inline or grab a copy.
               </p>
               <div className="flex flex-wrap justify-center sm:justify-start gap-4">
                 <Link

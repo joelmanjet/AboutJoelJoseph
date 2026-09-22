@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ChromeBeam from './ChromeBeam';
 import TiltCard from './TiltCard';
 
@@ -8,6 +9,7 @@ type Certification = {
     expires?: string;
     credentialId: string;
     credentialUrl: string;
+    logo: string;
 };
 
 const certifications: Certification[] = [
@@ -18,6 +20,7 @@ const certifications: Certification[] = [
         expires: 'Sep 2029',
         credentialId: '5453dd5a-64cb-4a8a-b9a4-c5f7a70bcc9e',
         credentialUrl: 'https://www.credly.com/badges/5453dd5a-64cb-4a8a-b9a4-c5f7a70bcc9e/public_url',
+        logo: '/awslogo.jpg',
     },
     {
         title: 'Salesforce Certified Agentforce Specialist',
@@ -25,6 +28,7 @@ const certifications: Certification[] = [
         issued: 'Aug 2026',
         credentialId: '8030888',
         credentialUrl: 'https://www.salesforce.com/trailblazer/joeljoseph',
+        logo: '/salesforcelogo.jpg',
     },
 ];
 
@@ -45,11 +49,8 @@ export default function CertificationsSection() {
                             style={{ boxShadow: '0 2px 12px rgba(20,28,40,0.08)' }}
                         >
                             <div className="flex items-start gap-4">
-                                <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-champagne-flat border border-navy/10 rounded-full">
-                                    <svg className="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                                    </svg>
+                                <div className="shrink-0 w-12 h-12 relative overflow-hidden bg-champagne-flat border border-navy/10 rounded-full">
+                                    <Image src={c.logo} alt={`${c.issuer} logo`} fill className="object-contain p-1.5" />
                                 </div>
 
                                 <div className="flex-1 min-w-0">

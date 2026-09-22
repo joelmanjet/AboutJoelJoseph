@@ -16,8 +16,9 @@ const projects: Project[] = [
     {
         title: 'StatePlanGPT – AI State Policy Assistant',
         description:
-            'GPT-powered assistant that parses state-level policy and planning documents and answers questions using retrieval-augmented generation. Private project — no public link yet.',
+            'GPT-powered assistant that parses state-level policy and planning documents and answers questions using retrieval-augmented generation. Private project, no public link yet.',
         tech: ['Python', 'RAG', 'AWS Bedrock', 'LLMs'],
+        image: '/stateplangpt.png',
     },
     {
         title: 'PostuRise – AI Posture Correction',
